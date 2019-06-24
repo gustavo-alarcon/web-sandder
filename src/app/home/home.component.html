@@ -1,0 +1,67 @@
+<div class="w3-top animated fadeInDownBig slow"
+    style="background:none; background-image: linear-gradient(180deg, white, rgba(255, 255, 255, 0)); transition-duration: 300ms"
+    [ngStyle]="{'background': navBgColor}" [ngClass]="{'mat-elevation-z8': navBgColor === 'white'}">
+    <div style="display:flex; background:none; padding: 16px 24px 8px 24px">
+        <span>
+            <img src="../../assets/images/SANDDER.png" alt="logo sandder" class="w3-hide-small"
+                style="margin-left: 16px;">
+            <img src="../../assets/images/SANDDER.png" alt="logo sandder" class="w3-hide-large" style="width:150px">
+        </span>
+        <span class="ms-fill"></span>
+        <div class="w3-hide-small">
+            <button mat-icon-button class="w3-margin-right">
+                <img src="../../assets/icons/facebook-square-brands.svg" alt="facebook" style="width:20px">
+            </button>
+            <button mat-icon-button class="w3-margin-right">
+                <img src="../../assets/icons/instagram-brands.svg" alt="facebook" style="width:20px">
+            </button>
+            <button mat-icon-button class="w3-margin-right">
+                <img src="../../assets/icons/whatsapp-brands.svg" alt="facebook" style="width:20px">
+            </button>
+        </div>
+        <div class="w3-hide-large w3-hide-medium">
+            <button mat-icon-button [matMenuTriggerFor]="appMenu">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </div>
+        <mat-menu #appMenu="matMenu">
+            <button mat-menu-item>HOME</button>
+            <button mat-menu-item>NOSOTROS</button>
+            <button mat-menu-item>COLECCIONES</button>
+            <button mat-menu-item>SANDDER TNT</button>
+            <button mat-menu-item>CONTÁCTANOS</button>
+        </mat-menu>
+
+    </div>
+    <div class="w3-hide-small" style="display:flex; background:none; align-content:center; padding: 0px 24px 16px 24px">
+        <button mat-button class="w3-margin-right">HOME</button>
+        <button mat-button class="w3-margin-right">NOSOTROS</button>
+        <button mat-button class="w3-margin-right" [matMenuTriggerFor]="collectionsMenu">
+            COLECCIONES
+            <mat-icon>keyboard_arrow_down</mat-icon>
+        </button>
+        <button mat-button class="w3-margin-right">SANDDER TNT</button>
+        <button mat-button class="w3-margin-right">CONTÁCTANOS</button>
+    </div>
+    <mat-menu #collectionsMenu="matMenu">
+        <button mat-menu-item>Colección #01</button>
+        <button mat-menu-item>Colección #02</button>
+        <button mat-menu-item>Colección #03</button>
+        <button mat-menu-item>Colección #04</button>
+    </mat-menu>
+</div>
+<ng-scrollbar [compact]="true" [shown]="hover">
+    <div class="ms-parallax animated fadeInUpBig" [ngStyle]="{'background-image': 'url(' + landingImage + ')'}">
+    </div>
+    <div class="w3-white">
+        <div class="w3-center" style="padding: 48px 24px 28px 24px">
+            <span class="mat-headline">Promociones</span>
+            <gallery [items]="images"></gallery>
+        </div>
+    </div>
+    <div id="collections" class="w3-red" style="height:100vh">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat tenetur cumque nemo asperiores quae facere, ex
+        eveniet dolorum ullam, quaerat inventore vero explicabo id debitis doloribus soluta. Voluptatum, consectetur
+        minus.
+    </div>
+</ng-scrollbar>

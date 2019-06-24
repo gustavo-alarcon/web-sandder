@@ -1,4 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "assets/css/animate.css";
+@import "assets/css/w3.css";
+@import "assets/css/loader.css";
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.ms-fill {
+    flex: auto 1 1;
+}
+
+.ms-parallax { 
+    /* The image used */
+    background-image: url("assets/images/PORTADA1.jpg");
+  
+    /* Set a specific height */
+    height: 100vh; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
